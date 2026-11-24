@@ -2,7 +2,7 @@
 
 Public site for Be My Hand: the Arabic-first landing page, legal pages, and the fallback pages for invite and bag links.
 
-The app links to `https://bemyhand.vercel.app`. Invite links stay at `/join?w=…&c=…`. Bag links stay at `/bag/<token>`. Other pages are `/ar/…` (default) and `/en/…`.
+The app links to `https://bmyhand.vercel.app`. Invite links stay at `/join?w=…&c=…`. Bag links stay at `/bag/<token>`. Other pages are `/ar/…` (default) and `/en/…`.
 
 ## Run locally
 
@@ -33,7 +33,7 @@ Copy `.env.example` to `.env.local`. All values are optional.
 
 The package name in the Android file is `com.salihcodev.bemyhand`. The dev bundle id is not listed.
 
-The public contact address on the legal pages is `hello@bemyhand.vercel.app` in `lib/site.ts`. Change it there before treating the policies as published. The policy text is a draft and should be reviewed by a lawyer.
+The public contact address on the legal pages is `hello@bmyhand.vercel.app` in `lib/site.ts`. Change it there before treating the policies as published. The policy text is a draft and should be reviewed by a lawyer.
 
 ## What the link pages show
 

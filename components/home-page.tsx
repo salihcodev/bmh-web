@@ -56,10 +56,10 @@ function structuredData(dict: Dictionary) {
 
 function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   return (
-    <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:py-24">
-      <div className="grid gap-6">
+    <section className="hero-section mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:py-24">
+      <div className="hero-copy grid gap-6">
         <p className="w-fit rounded-full bg-lime px-3 py-1 text-sm font-medium text-ink">{dict.hero.eyebrow}</p>
-        <h1 className="max-w-xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">{dict.hero.title}</h1>
+        <h1 className="max-w-xl text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">{dict.hero.title}</h1>
         <p className="max-w-xl text-lg leading-8 text-muted dark:text-[#c5c8ce]">{dict.hero.subtitle}</p>
         <div className="flex flex-wrap gap-3">
           <a href={`/${locale}#how`} className="inline-flex h-14 items-center rounded-full bg-ink px-6 font-bold text-paper dark:bg-lime dark:text-ink">
@@ -70,7 +70,7 @@ function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
           </a>
         </div>
       </div>
-      <div className="relative mx-auto grid size-72 place-items-center">
+      <div className="hero-mark relative mx-auto grid size-64 place-items-center sm:size-72">
         <span className="ripple" />
         <span className="ripple ripple-delay-1" />
         <span className="ripple ripple-delay-2" />

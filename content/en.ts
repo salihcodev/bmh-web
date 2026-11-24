@@ -433,7 +433,7 @@ export const en: Dictionary = {
       {
         heading: "How to clear them",
         paragraphs: [
-          "Use your browser's site settings for bemyhand.vercel.app to delete cookies. The site will return to Arabic and the system theme.",
+          "Use your browser's site settings for bmyhand.vercel.app to delete cookies. The site will return to Arabic and the system theme.",
         ],
       },
     ],

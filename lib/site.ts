@@ -1,7 +1,7 @@
 export const site = {
   name: "Be My Hand",
-  url: "https://bemyhand.vercel.app",
-  contactEmail: "hello@bemyhand.vercel.app",
+  url: "https://bmyhand.vercel.app",
+  contactEmail: "hello@bmyhand.vercel.app",
   bundleId: "com.salihcodev.bemyhand",
   scheme: "bemyhand",
   iosStoreUrl: process.env.NEXT_PUBLIC_IOS_STORE_URL ?? "",

@@ -23,10 +23,10 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
 
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-paper/90 backdrop-blur-md dark:border-white/10 dark:bg-night/90">
-      <div className="relative mx-auto flex h-16 max-w-6xl items-center gap-3 px-5">
-        <a href={`/${locale}`} className="flex items-center gap-2 font-bold tracking-tight">
+      <div className="relative mx-auto flex h-16 max-w-6xl items-center gap-2 px-4 sm:gap-3 sm:px-5">
+        <a href={`/${locale}`} className="flex min-w-0 shrink items-center gap-2 font-bold tracking-tight">
           <BrandMark size={36} tile title={site.name} />
-          <span>{site.name}</span>
+          <span className="truncate text-sm sm:text-base">{site.name}</span>
         </a>
         <nav className="ms-6 hidden items-center gap-5 text-sm font-medium text-muted md:flex" aria-label={dict.nav.features}>
           {productPaths.map((item) => (
@@ -35,7 +35,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
             </a>
           ))}
         </nav>
-        <div className="ms-auto flex items-center gap-2">
+        <div className="ms-auto flex shrink-0 items-center gap-2">
           <div className="hidden md:block">
             <Suspense fallback={<span className="inline-block h-11 min-w-28 rounded-full border border-line" />}>
               <LocaleToggle locale={locale} label={dict.locale.label} ar={dict.locale.ar} en={dict.locale.en} />

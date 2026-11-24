@@ -2,7 +2,7 @@
 
 Draft mapping for the Be My Hand website and app disclosures. A lawyer should review the policies in `content/ar.ts` and `content/en.ts` before the store forms are submitted. Nothing here is a filed label.
 
-The public deletion URL is `https://bemyhand.vercel.app/ar/legal/deletion` (English: `/en/legal/deletion`). The contact address is `hello@bemyhand.vercel.app`.
+The public deletion URL is `https://bmyhand.vercel.app/ar/legal/deletion` (English: `/en/legal/deletion`). The contact address is `hello@bmyhand.vercel.app`.
 
 ## Google Play Data safety
 
@@ -42,7 +42,7 @@ The public deletion URL is `https://bemyhand.vercel.app/ar/legal/deletion` (Engl
 
 ## Still manual
 
-- Replace the contact address if `hello@bemyhand.vercel.app` is not the mailbox you will read.
+- Replace the contact address if `hello@bmyhand.vercel.app` is not the mailbox you will read.
 - Add the signing-certificate SHA-256 and the Apple Team ID before the store builds rely on verified links.
 - Add the store URLs when the listings exist.
 - Have a lawyer review the Arabic and English policy text.

@@ -25,7 +25,10 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
 }
+
+body { max-width: 100%; overflow-x: clip; }
 
 html.locale-ar h1,
 html.locale-ar h2,
@@ -36,6 +39,17 @@ html.locale-ar h3 {
 body {
   font-family: inherit;
   text-rendering: optimizeLegibility;
+  transition: background-color 260ms ease, color 260ms ease;
+}
+
+body, body * {
+  transition-property: color, background-color, border-color;
+  transition-duration: 240ms;
+  transition-timing-function: ease;
+}
+
+html[lang="ar"] body {
+  font-family: var(--font-plex), var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
 }
 
 ::selection {
@@ -71,6 +85,24 @@ body {
   animation: bmh-ripple 2.8s ease-out infinite;
 }
 
+.theme-icon-stack { position: relative; display: grid; width: 24px; height: 24px; }
+.theme-icon { position: absolute; inset: 0; display: grid; place-items: center; transition: opacity 240ms ease, transform 320ms cubic-bezier(.2,.8,.2,1); }
+.theme-icon-moon { display: grid !important; }
+.theme-icon-sun { display: none !important; }
+.theme-icon svg { width: 20px; height: 20px; }
+.theme-icon-moon { opacity: 1; transform: rotate(0) scale(1); }
+.theme-icon-sun { opacity: 0; transform: rotate(-45deg) scale(.65); }
+.dark .theme-icon-moon { display: none !important; opacity: 0; transform: rotate(45deg) scale(.65); }
+.dark .theme-icon-sun { display: grid !important; opacity: 1; transform: rotate(0) scale(1); }
+.theme-toggle:active .theme-icon { transform: rotate(18deg) scale(.82); }
+.hero-copy { animation: hero-arrive 650ms cubic-bezier(.2,.8,.2,1) both; }
+.hero-mark { animation: hero-float 5s ease-in-out 700ms infinite; }
+.hero-mark > :last-child { animation: hero-pop 700ms cubic-bezier(.2,.8,.2,1) 180ms both; }
+
+@keyframes hero-arrive { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes hero-float { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-8px) rotate(1.5deg); } }
+@keyframes hero-pop { from { opacity: 0; transform: scale(.84) rotate(-8deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+
 .ripple-delay-1 {
   animation-delay: 0.9s;
 }
@@ -80,9 +112,12 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html, body {
     scroll-behavior: auto;
+    transition: none;
   }
+
+  body, body *, .theme-icon, .hero-copy, .hero-mark, .hero-mark > :last-child, .ripple { animation: none !important; transition: none !important; }
 
   .ripple {
     animation: none;

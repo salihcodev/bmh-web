@@ -7,7 +7,7 @@ export function fillEmail(text: string) {
 
 export function LawyerNote({ children }: { children: string }) {
   return (
-    <p className="rounded-3xl border border-line bg-lime/40 px-4 py-3 text-sm leading-6 text-ink dark:border-lime/30 dark:bg-lime/15">
+    <p className="rounded-3xl border border-line bg-lime/40 px-4 py-3 text-sm leading-6 text-ink dark:border-lime/30 dark:bg-[#dfff93] dark:text-[#202020]">
       {children}
     </p>
   );
